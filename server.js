@@ -36,11 +36,11 @@ app.get('/', (req, res) => {
 
 
 const pool = mysql.createPool({
-  host: 'localhost',  
-  user: 'root',
-  password: 'Mittu@248',
-  database: 'Project',
-  port: 3306,
+  host: 'db-mysql-nyc3-77065-do-user-15351270-0.c.db.ondigitalocean.com',  
+  user: 'doadmin',
+  password: 'AVNS_G8UGTpt1b9jgLhblS5R',
+  database: 'defaultdb',
+  port: 25060,
 });
 
 

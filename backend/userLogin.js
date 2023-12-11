@@ -27,7 +27,7 @@ async function userRegistration() {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/signupUser', {
+        const response = await fetch('http://138.197.127.91:3000/signupUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ async function initiateSession(userID) {
     const sessionData = { UserID: userID };
 
     try {
-        const response = await fetch('http://localhost:3000/addToUserSessions', {
+        const response = await fetch('http://138.197.127.91:3000/addToUserSessions', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ async function userLogin() {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/loginuser', {
+        const response = await fetch('http://138.197.127.91:3000/loginuser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -112,7 +112,7 @@ async function getTotalBudget(userId) {
 
 async function getCurrentUserLoginID() {
     try {
-        const response = await fetch('http://localhost:3000/api/currentUserLoginID');
+        const response = await fetch('http://138.197.127.91:3000/api/currentUserLoginID');
 
         // Log the entire response
         console.log(response);
@@ -516,7 +516,7 @@ function getRecordDetails() {
       var forWhat = document.getElementById("forWhat").value;
 
       // Replace 'http://localhost:3000' with your actual server URL
-      fetch(`http://localhost:3000/api/getRecordDetails?userID=${userID}&forWhat=${forWhat}`)
+      fetch(`http://138.197.127.91:3000/api/getRecordDetails?userID=${userID}&forWhat=${forWhat}`)
         .then(response => response.json())
         .then(data => {
             document.getElementById("result").innerHTML = data.Amount+" "+data.ForWhat;
@@ -533,7 +533,7 @@ function saveRecord() {
       var amount = document.getElementById("amountnew").value;
         console.log(amount,"hhh")
       // Replace 'http://localhost:3000' with your actual server URL
-      fetch('http://localhost:3000/api/saveRecord', {
+      fetch('http://138.197.127.91:3000/api/saveRecord', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -556,7 +556,7 @@ function deleteRecord() {
       var userID = currentUserLoginID
 
       // Replace 'http://localhost:3000' with your actual server URL
-      fetch(`http://localhost:3000/api/deleteRecord?userID=${userID}&forWhat=${forWhat}`, {
+      fetch(`http://138.197.127.91:3000/api/deleteRecord?userID=${userID}&forWhat=${forWhat}`, {
         method: 'DELETE',
       })
       .then(response => response.json())
@@ -586,7 +586,7 @@ function logout(){
 
 
  function removeSession(userId) {
-    fetch('http://localhost:3000/remove-session', {
+    fetch('http://138.197.127.91:3000/remove-session', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
